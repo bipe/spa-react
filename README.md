@@ -1,2 +1,2 @@
-# spa-react-crud
+# spa-react
 Simple SPA made with React
