@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -15,8 +16,10 @@ function UserCard({ user }) {
             <p>User id is {user.id}</p>
             {/* <a href="twitter.com">Acessar twitter</a> */}
             <div className="button-container">
-                <button type="button" class="btn btn-primary">Edit User</button>
-                <button type="button" class="btn btn-danger">Delete User</button>
+                <Link to={`/users/${user.id}`} className="btn btn-primary text-light">
+                    Edit User
+                </Link>
+                <button type="button" className="btn btn-danger">Delete User</button>
             </div>
         </li>
     )

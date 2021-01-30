@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import api from './services/api';
+import { Link } from 'react-router-dom'
 
 //components:
 import UserCard from './components/UserCard';
@@ -34,6 +35,7 @@ function App() {
         <h4>Sidebar</h4>
       </aside> */}
       <main>
+      <Link to="/car">Teste pagina 404</Link>
         <ul>
           {users.map(user => (
             <UserCard key={user.id} user={user}/>
