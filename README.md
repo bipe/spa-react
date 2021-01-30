@@ -12,13 +12,14 @@ Simple SPA made with React
 - [ ] Edit User page: reload (get) after submit
 
 - [ ] Delete request
-- [ ] Login page
-- [ ] Modularize routes
-- 
+- [x] Login page (send login POST, retrieve token)
+- [ ] Store token (local/sess storage)
+- [x] Modularize App
 
 ### style:
+- [ ] Clean App.css after modularization
 - [x] Edit User page
-- [ ] Login page
+- [x] Login page
 - [x] 404 page
 - [x] Loading animation
 - [ ] delete aside/sidebar if not used
