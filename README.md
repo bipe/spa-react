@@ -6,13 +6,19 @@ Simple SPA made with React
 
 ### features:
 - [x] List Users page
-- [] Edit User page (how to send the user object to the function)
-- [] Login auth
-- [] Modularize routes
+
+- [x] Edit User page
+- [ ] Edit User page: error if couldn't retrieve user
+- [ ] Edit User page: reload (get) after submit
+
+- [ ] Delete page (?)
+- [ ] Login page
+- [ ] Modularize routes
 - 
 
 ### style:
-- [] Edit User page
-- [] Login page
-- [] 404 page
-- [] delete aside/sidebar if not used
+- [x] Edit User page
+- [ ] Login page
+- [ ] 404 page
+- [ ] Loading animation
+- [ ] delete aside/sidebar if not used

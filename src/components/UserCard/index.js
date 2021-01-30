@@ -14,7 +14,6 @@ function UserCard({ user }) {
                 </div>
             </header>
             <p>User id is {user.id}</p>
-            {/* <a href="twitter.com">Acessar twitter</a> */}
             <div className="button-container">
                 <Link to={`/users/${user.id}`} className="btn btn-primary text-light">
                     Edit User
