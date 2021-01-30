@@ -23,26 +23,26 @@ li.user-item header .user-info {
 
 .user-info strong {
     display: block;
-    font-size: 16px;
+    font-size: 18px;
     color: #333;
 }
 
 .user-info span {
-    font-size: 12px;
+    font-size: 14px;
     color: #999;
     margin-top: 2px;
 }
 
 li.user-item p {
     color: #666;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     margin: 10px 0;
 }
 
 li.user-item a {
     color: #7344d1;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
 }
 
@@ -51,8 +51,19 @@ li.user-item a:hover {
 }
 
 .button-container {
+    margin-top: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40%;
     list-style: none;
+}
+
+.btn.btn-primary {
+    background: #7344d1 !important;
+    border-color: #7344d1 !important;
+}
+
+.btn.btn-primary:hover {
+    background: #6737c7 !important;
+    border-color: #6737c7 !important;
 }

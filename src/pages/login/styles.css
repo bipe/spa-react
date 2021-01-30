@@ -1,0 +1,14 @@
+.body-card .header-title {
+    display: flex;
+    flex-direction: column; /*lado a lado numa linha (row) */
+    align-items: flex-start; /* aside e main fiquem alinhados ao TOPO */
+}
+
+.body-card .header-title strong {
+    font-size: 48px;
+    color: #6737c7;
+}
+
+.body-card .header-title p {
+    font-size: 16px;
+}

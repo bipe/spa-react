@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 //page components
 import App from './App';
+import Login from './pages/login';
 import EditUser from './pages/editUser';
 import NotFound from './pages/notFound';
 
@@ -14,10 +15,10 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact={true} component={App} />
-
+        <Route path="/" exact={true} component={Login} />
+        <Route path="/login" exact={true} component={Login} />
+        <Route path="/users" exact={true} component={App} />
         <Route path="/users/:id" component={EditUser} />
-        {/* ultima rota deve ser a 404 */}
         <Route path="*" component={NotFound} />
       </Switch>
     </BrowserRouter>

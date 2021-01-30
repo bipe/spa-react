@@ -11,7 +11,7 @@ Simple SPA made with React
 - [ ] Edit User page: error if couldn't retrieve user
 - [ ] Edit User page: reload (get) after submit
 
-- [ ] Delete page (?)
+- [ ] Delete request
 - [ ] Login page
 - [ ] Modularize routes
 - 
@@ -19,6 +19,6 @@ Simple SPA made with React
 ### style:
 - [x] Edit User page
 - [ ] Login page
-- [ ] 404 page
-- [ ] Loading animation
+- [x] 404 page
+- [x] Loading animation
 - [ ] delete aside/sidebar if not used

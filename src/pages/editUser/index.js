@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LoadingPage from '../../components/LoadingPage';
 import api from '../../services/api';
 
 import './styles.css';
@@ -16,7 +17,7 @@ class EditUser extends Component {
    };
 
    //lifecycle hook so we can wait for responses and manipulate loading
-   async componentDidMount() { 
+   async componentDidMount() {
       const { id } = this.props.match.params;
 
       const response = await api.get(`/users/${id}?delay=2`)
@@ -50,21 +51,22 @@ class EditUser extends Component {
       const response = await api.put(`/users/${id}?delay=2`, { data })
          .then(resp => resp.data);
 
-      this.setState({ isLoading: false});
+      this.setState({ isLoading: false });
 
-      if (response.updatedAt) {
-         alert("User edited successfuly\n\nFirst name: "+response.data.first_name+"\nLast name: "+response.data.last_name);
-      }
+      if (response.updatedAt)
+         alert("User updated successfully\n\nFirst name: " + response.data.first_name + "\nLast name: " + response.data.last_name);
+      else
+         alert("Error: Couldn't update user at this time. API may be be down.");
    }
 
-
+   /////
 
    render() {
       const { user, isLoading } = this.state;
 
       if (!isLoading) {
          return (
-            <li className="user-item edit-card">
+            <li className="user-item body-card">
                <header className="user-section">
                   <img src={user.avatar} alt={user.firstName} />
                   <div className="user-info">
@@ -79,8 +81,8 @@ class EditUser extends Component {
                      <input type="text" className="form-control" placeholder="First Name" ref={(input) => this.first_name = input} defaultValue={user.first_name} />
                   </div>
                   <div className="form-group">
-                     <label htmlFor="lastName">Last Name</label>
-                     <input type="text" className="form-control" placeholder="Digite o sobrenome do usuário" ref={(input) => this.last_name = input} defaultValue={user.last_name} />
+                     <label htmlFor="last_name">Last Name</label>
+                     <input type="text" className="form-control" placeholder="Last Name" ref={(input) => this.last_name = input} defaultValue={user.last_name} />
                   </div>
                   <button type="submit" className="btn btn-primary">Update User</button>
                </form>
@@ -89,14 +91,9 @@ class EditUser extends Component {
       }
 
       return (
-         <div className="App">
-            <p>
-               Loading...
-       </p>
-         </div>
+         <LoadingPage />
       );
-
-
+      
    }
 }
 
