@@ -1,78 +1,78 @@
 li.user-item {
-    background: #FFF;
-    box-shadow: 0 0 14px 0 rgba(0,0,0,0.2);
-    border-radius: 2px;
-    padding: 20px;
+	background: #FFF;
+	box-shadow: 0 0 14px 0 rgba(0,0,0,0.2);
+	border-radius: 2px;
+	padding: 20px;
 }
 
 li.user-item header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 li.user-item header img {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
 }
 
 li.user-item header .user-info {
-    margin-left: 10px
+	margin-left: 10px
 }
 
 .user-info strong {
-    display: block;
-    font-size: 18px;
-    color: #333;
+	display: block;
+	font-size: 18px;
+	color: #333;
 }
 
 .user-info span {
-    font-size: 14px;
-    color: #999;
-    margin-top: 2px;
+	font-size: 14px;
+	color: #999;
+	margin-top: 2px;
 }
 
 li.user-item p {
-    color: #666;
-    font-size: 16px;
-    line-height: 20px;
-    margin: 10px 0;
+	color: #666;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 10px 0;
 }
 
 li.user-item a {
-    color: #7344d1;
-    font-size: 16px;
-    text-decoration: none;
+	color: #7344d1;
+	font-size: 16px;
+	text-decoration: none;
 }
 
 li.user-item a:hover {
-    color: #5a2ea6;
+	color: #5a2ea6;
 }
 
 .button-container {
-    margin-top: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40%;
-    list-style: none;
+	margin-top: 15px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40%;
+	list-style: none;
 }
 
 .btn.btn-primary {
-    background: #7344d1 !important;
-    border-color: #7344d1 !important;
+	background: #7344d1 !important;
+	border-color: #7344d1 !important;
 }
 
 .btn.btn-primary:hover {
-    background: #6737c7 !important;
-    border-color: #6737c7 !important;
+	background: #6737c7 !important;
+	border-color: #6737c7 !important;
 }
 
 .load-container .screen-centered{
-    width: 150px;
-    height: 75px;
-    box-shadow: 0 0 14px 0 rgba(0,0,0,0.2);
-    background: #FFF;
-    margin-top: -30px !important; /*set to a negative number 1/2 of your height*/
-    margin-left: -50px !important; /*set to a negative number 1/2 of your width*/
+	width: 150px;
+	height: 75px;
+	box-shadow: 0 0 14px 0 rgba(0,0,0,0.2);
+	background: #FFF;
+	margin-top: -30px !important; /*set to a negative number 1/2 of your height*/
+	margin-left: -50px !important; /*set to a negative number 1/2 of your width*/
 }

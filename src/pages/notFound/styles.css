@@ -1,8 +1,8 @@
 .not-found {
-    text-align: center;
-    display: inline block;
+	text-align: center;
+	display: inline block;
 }
 
 .not-found strong{
-    font-size: 42px;
+	font-size: 42px;
 }

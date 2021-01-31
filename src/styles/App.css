@@ -1,26 +1,22 @@
 #app {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 30px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 60px 30px;
 
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
 }
 
 /* for responsiveness, when width goes below 900px, the styling changes
 to allocate the items in a better way */
 @media (max-width: 900px) { 
-    #app {
-        flex-direction: column;
-    }
+	#app {
+		flex-direction: column;
+	}
 
-    #app main {
-        margin-left: 0;
-        margin-top: 30px;
-    }
-
-    #app aside {
-        width: 100%;
-    }
+	#app main {
+		margin-left: 0;
+		margin-top: 30px;
+	}
 }

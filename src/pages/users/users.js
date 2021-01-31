@@ -6,7 +6,7 @@ import LoadingPage from '../../components/LoadingPage/LoadingPage.js';
 
 import '../../styles/global.css'
 import '../../styles/App.css'
-import '../../styles/Main.css'
+import './styles.css'
 
 
 class Users extends Component {
@@ -67,10 +67,16 @@ class Users extends Component {
 
 	/////
 
+	logout = () => {
+		sessionStorage.clear();
+		document.location.reload();
+	}
+
+	/////
+
 	render() {
 		const { users, page, queryData, isLoading } = this.state;
 
-		//loading page
 		if (isLoading) {
 			return (
 				<LoadingPage text={'Loading users...'} />
@@ -81,7 +87,8 @@ class Users extends Component {
 			<>
 				<div id="app">
 					<main>
-						<Link to="/car">Teste pagina 404</Link>
+						<strong id="page-title">Users</strong>
+						<Link id="example404"className="btn btn-primary mb-2" to="/car">Test a 404 page</Link>
 						<ul>
 							{users.map(user => (
 								<UserCard key={user.id} user={user} />
@@ -99,6 +106,10 @@ class Users extends Component {
 						</li>
 					</ul>
 				</div>
+				<div className="logout">
+					<button className="btn btn-danger" onClick={this.logout}>Logout</button>
+				</div>
+
 			</>
 		);
 	}
