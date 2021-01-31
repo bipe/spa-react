@@ -1,7 +1,7 @@
 .body-card .header-title {
     display: flex;
-    flex-direction: column; /*lado a lado numa linha (row) */
-    align-items: flex-start; /* aside e main fiquem alinhados ao TOPO */
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .body-card .header-title strong {

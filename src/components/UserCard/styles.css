@@ -67,3 +67,12 @@ li.user-item a:hover {
     background: #6737c7 !important;
     border-color: #6737c7 !important;
 }
+
+.load-container .screen-centered{
+    width: 100px;
+    height: 75px;
+    box-shadow: 0 0 14px 0 rgba(0,0,0,0.2);
+    background: #FFF;
+    margin-top: -30px !important; /*set to a negative number 1/2 of your height*/
+    margin-left: -50px !important; /*set to a negative number 1/2 of your width*/
+}

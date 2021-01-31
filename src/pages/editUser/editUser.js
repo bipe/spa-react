@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LoadingPage from '../../components/LoadingPage';
+import LoadingPage from '../../components/LoadingPage/LoadingPage.js';
 import api from '../../services/api';
 
 import './styles.css';
@@ -14,13 +14,22 @@ class EditUser extends Component {
    state = {
       user: {},
       isLoading: true,
+      token: sessionStorage.getItem('token')
+   };
+
+   config = {
+      headers: {
+         Authorization: ''
+      }
    };
 
    //lifecycle hook so we can wait for responses and manipulate loading
    async componentDidMount() {
       const { id } = this.props.match.params;
 
-      const response = await api.get(`/users/${id}?delay=2`)
+      this.config.headers.Authorization = `Bearer ${this.state.token}`;
+
+      const response = await api.get(`/users/${id}?delay=2`, this.config)
 
       this.setState({ user: response.data.data, isLoading: false });
    }
@@ -48,7 +57,9 @@ class EditUser extends Component {
          isLoading: true,
       });
 
-      const response = await api.put(`/users/${id}?delay=2`, { data })
+      this.config.headers.Authorization = `Bearer ${this.state.token}`;
+
+      const response = await api.put(`/users/${id}?delay=2`, { data }, this.config)
          .then(resp => resp.data);
 
       this.setState({ isLoading: false });
@@ -91,7 +102,7 @@ class EditUser extends Component {
       return (
          <LoadingPage />
       );
-      
+
    }
 }
 

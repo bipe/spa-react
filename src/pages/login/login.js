@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LoadingPage from '../../components/LoadingPage';
+import LoadingPage from '../../components/LoadingPage/LoadingPage.js';
 import api from '../../services/api';
 
 import './styles.css';

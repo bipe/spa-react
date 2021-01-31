@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Redirect, BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Users from './pages/users';
-import Login from './pages/login';
-import EditUser from './pages/editUser';
-import NotFound from './pages/notFound';
+import Users from './pages/users/users.js';
+import Login from './pages/login/login.js';
+import EditUser from './pages/editUser/editUser.js';
+import NotFound from './pages/notFound/notFound.js';
 
 import './styles/global.css'
 import './styles/App.css'
-import './styles/Sidebar.css'
 import './styles/Main.css'
 
 function App() {
