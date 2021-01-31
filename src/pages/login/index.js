@@ -9,17 +9,21 @@ function Login({ setToken }) {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
+
     const handleLogin = async e => {
         e.preventDefault();
         const response = await loginUser({
             email,
             password
         });
+
         setToken(response.token);
+
+        //save token on storage
     }
 
     async function loginUser({ email, password }) {
-        const response = await api.post(`/login?delay=2`, { email, password })
+        const response = await api.post(`/login?delay=2`, { email, password }) //set loading page here
             .then(resp => resp.data);
 
         return response;

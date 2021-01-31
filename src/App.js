@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Redirect, BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Users from './pages/users';
 import Login from './pages/login';
@@ -14,7 +14,7 @@ import './styles/Main.css'
 function App() {
   const [token, setToken] = useState();
 
-  if(!token) {
+  if (!token) {
     return <Login setToken={setToken} />
   }
 
@@ -22,9 +22,16 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact={true} component={Login} />
-        <Route path="/login" exact={true} component={Login} />
         <Route path="/users" exact={true} component={Users} />
+
+        <Route exact path="/">
+          {token ? <Redirect to="/users" /> : <Route path="/" exact={true} component={Login} />}
+        </Route>
+
+        <Route exact path="/login">
+          {token ? <Redirect to="/users" /> : <Route path="/" exact={true} component={Login} />}
+        </Route>
+
         <Route path="/users/:id" component={EditUser} />
         <Route path="*" component={NotFound} />
       </Switch>

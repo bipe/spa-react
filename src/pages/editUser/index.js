@@ -56,7 +56,7 @@ class EditUser extends Component {
       if (response.updatedAt)
          alert("User updated successfully\n\nFirst name: " + response.data.first_name + "\nLast name: " + response.data.last_name);
       else
-         alert("Error: Couldn't update user at this time. API may be be down.");
+         alert("Error: Couldn't update user at this time. API may be down.");
    }
 
    /////
