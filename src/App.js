@@ -22,8 +22,6 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/users" exact={true} component={Users} />
-
         <Route exact path="/">
           {token ? <Redirect to="/users" /> : <Route path="/" exact={true} component={Login} />}
         </Route>
@@ -31,7 +29,8 @@ function App() {
         <Route exact path="/login">
           {token ? <Redirect to="/users" /> : <Route path="/" exact={true} component={Login} />}
         </Route>
-
+        
+        <Route path="/users" exact={true} component={Users} />
         <Route path="/users/:id" component={EditUser} />
         <Route path="*" component={NotFound} />
       </Switch>

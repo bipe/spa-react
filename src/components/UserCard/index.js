@@ -18,7 +18,7 @@ function UserCard({ user }) {
                 <Link to={`/users/${user.id}`} className="btn btn-primary text-light">
                     Edit User
                 </Link>
-                <button type="button" className="btn btn-danger">Delete User</button>
+                <button type="button" className="btn btn-danger">Delete</button>
             </div>
         </li>
     )

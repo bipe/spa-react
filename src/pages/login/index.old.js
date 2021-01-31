@@ -24,9 +24,6 @@ class Login extends Component {
     async handleLogin(e) {
         e.preventDefault();
 
-        //set as 'sent' user and 
-        //HERE
-
         const { email, password } = this.state;
 
         //check if user or password is invalid to prevent continue

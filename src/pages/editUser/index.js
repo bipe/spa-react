@@ -59,8 +59,6 @@ class EditUser extends Component {
          alert("Error: Couldn't update user at this time. API may be down.");
    }
 
-   /////
-
    render() {
       const { user, isLoading } = this.state;
 

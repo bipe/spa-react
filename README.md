@@ -2,28 +2,19 @@
 Simple SPA made with React
 
 
-## to-do:
-
-### features:
-- [x] List Users page
-
-- [x] Edit User page
+## to-do (ordered by priority):
+- [ ] !Send token in ALL requests after login (retrieve from sess Storage)
+- [ ] !Delete request (ask for user confirmation on deleting)
+- [ ] !Users pagination 
+- [ ] isMounted component when login success
 - [ ] Edit User page: error if couldn't retrieve user
 - [ ] Edit User page: reload (get) after submit
-
-- [ ] !Delete request (ask for user confirmation on deleting)
-- [x] Login page (send login POST, retrieve token)
-- [ ] !show ERROR and prevent redirect if login failed
-- [ ] !Store token (local/sess storage)
-- [x] Modularize App
-
-- [ ] !Send token in ALL requests after login
-
-### style:
+- [ ] delete aside/sidebar if not used
 - [ ] Clean App.css after modularization
+- [x] !show ERROR and prevent redirect if login failed
+- [x] List Users page
 - [x] Edit User page
-- [ ] !Users pagination 
 - [x] Login page
 - [x] 404 page
 - [x] Loading animation
-- [ ] delete aside/sidebar if not used
+
