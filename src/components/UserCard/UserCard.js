@@ -44,7 +44,7 @@ function UserCard({ user }) {
     if (isLoading) {
         return (
             <div className="load-container screen-centered">
-                <LoadingPage />
+                <LoadingPage text={'Deleting user...'}/>
             </div>
 
         );

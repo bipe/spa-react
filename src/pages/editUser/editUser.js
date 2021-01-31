@@ -100,7 +100,7 @@ class EditUser extends Component {
       }
 
       return (
-         <LoadingPage />
+         <LoadingPage text={'Loading'} />
       );
 
    }

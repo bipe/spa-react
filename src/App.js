@@ -16,8 +16,7 @@ function App() {
   if (!token) {
     return <Login setToken={setToken} />
   }
-
-  console.log(token);
+  
   return (
     <BrowserRouter>
       <Switch>

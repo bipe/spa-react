@@ -2,10 +2,11 @@ main {
     flex: 1;
 }
 
-/* responsividade - separar 1 dev por linha quando a largura for menor que 650px (1h08min da aula)*/
+/* for responsiveness, when width goes below 650px, the styling changes
+to allocate one card per line */
 @media (max-width: 650px) {
     main ul {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 }
 

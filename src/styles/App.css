@@ -8,9 +8,8 @@
     align-items: flex-start;
 }
 
-/* responsividade de modo simples:
-No navegador, inspecionando elemento, diminuimos a janela até ver onde o layout n se comporta muito bem no caso 1000px */
-
+/* for responsiveness, when width goes below 900px, the styling changes
+to allocate the items in a better way */
 @media (max-width: 900px) { 
     #app {
         flex-direction: column;

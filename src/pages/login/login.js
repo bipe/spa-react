@@ -44,7 +44,7 @@ function Login({ setToken }) {
 
     if (isLoading) {
         return (
-            <LoadingPage />
+            <LoadingPage text={'Loading'}/>
         );
     }
 
@@ -70,7 +70,7 @@ function Login({ setToken }) {
             {error &&
                 <div className="alert alert-danger" role="alert">
                     Error! {error.data.error}.
-          </div>
+                </div>
             }
             <p>made by <a href="https://github.com/bipe/spa-react">Luis F. Marconi</a> @ 2021</p>
         </li>
